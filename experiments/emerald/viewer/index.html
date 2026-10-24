@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#191b1c">
+<title>Emerald — Mechanical Beetle</title>
+<link rel="stylesheet" href="viewer.css?v=film-final-5">
+</head>
+<body>
+<main id="viewer" aria-label="Interactive mechanical beetle">
+  <div id="stage" role="region" aria-label="3D model. Drag to orbit, scroll or pinch to zoom. Arrow keys rotate the view." tabindex="0"></div>
+  <img id="poster" src="assets/poster-film.png" alt="Emerald mechanical beetle with champagne brass trim and cool gunmetal joints in a graphite studio">
+  <header><h1>Emerald</h1><p class="subtitle">A mechanical beetle, built in Blender.</p></header>
+  <div class="view-tools" aria-label="Camera views"><button id="hero" title="Front three-quarter view">Hero</button><button id="top" title="Top view">Top</button><button id="reset" title="Reset model and camera">Reset</button></div>
+  <p id="loading" role="status" aria-live="polite">Preparing the model…</p>
+  <div id="error" hidden><p>The interactive model couldn’t load.</p><p id="error-detail">You can still view the studio image.</p><button id="retry">Try again</button></div>
+  <div class="interaction-hint" aria-hidden="true">Drag to explore <span>·</span> Scroll to zoom</div>
+  <section class="controls" aria-label="Model controls">
+    <div class="shell-control"><div class="shell-label"><button id="shell-toggle" disabled>Open shells</button><output id="shell-value" for="shell-range">0%</output></div><input id="shell-range" type="range" min="0" max="100" value="0" step="1" aria-label="Shell opening" disabled></div>
+    <div class="motion-controls"><button id="orbit" class="toggle" aria-pressed="false" disabled><span class="indicator"></span><span>Rotate view</span></button><button id="motor" class="toggle" aria-pressed="false" disabled><span class="indicator"></span><span>Run motor</span></button><button id="pause" disabled>Pause all</button></div>
+    <p class="control-note">Emerald · Champagne · Graphite</p>
+  </section>
+  <noscript><p class="noscript">Enable JavaScript to explore the 3D model.</p></noscript>
+</main>
+<script src="bootstrap.js?v=film-final-5" defer></script>
+</body></html>
